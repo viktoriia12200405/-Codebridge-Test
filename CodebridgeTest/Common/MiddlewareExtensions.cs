@@ -19,7 +19,7 @@ public static class MiddlewareExtensions
         });
         builder.Host.ConfigureAppConfiguration(config =>
         {
-            if (Path.GetFullPath(@"../").Split('\\').Where(x => !string.IsNullOrEmpty(x)).Last() == "CodebridgeTest")
+            if (Path.GetFullPath(@"../").Split('\\').Where(x => !string.IsNullOrEmpty(x)).Last() == "-Codebridge-Test")
                 config.AddJsonFile(@$"{Path.GetFullPath(@"../")}/config.json");
             else
                 config.AddJsonFile(@$"{Path.GetFullPath(@"../../../../")}/config-tests.json");
