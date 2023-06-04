@@ -1,0 +1,6 @@
+{
+  "RequestSetting": {
+    "Period": "1", // in seconds
+    "RequestsAmount": "10"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "RequestSetting": {
+    "Period": "1", // in seconds
+    "RequestsAmount": "10"
+  },
+  "ConnectionString": "Server=DESKTOP-GJAJF5V;Database=DogDB;Trusted_Connection=True;TrustServerCertificate=true;"
+}
