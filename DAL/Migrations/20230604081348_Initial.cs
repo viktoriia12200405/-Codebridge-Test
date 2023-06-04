@@ -2,6 +2,8 @@
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace DAL.Migrations
 {
     /// <inheritdoc />
@@ -22,6 +24,17 @@ namespace DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Dogs", x => x.Name);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Dogs",
+                columns: new[] { "Name", "Color", "TailLength", "Weight" },
+                values: new object[,]
+                {
+                    { "Doggy", "Purple", 15, 33 },
+                    { "Kesha", "Black", 20, 5 },
+                    { "Luntik", "Red", 10, 80 },
+                    { "Vupsen", "Green", 50, 50 }
                 });
         }
 

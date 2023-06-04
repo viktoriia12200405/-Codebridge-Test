@@ -39,6 +39,36 @@ namespace DAL.Migrations
                     b.HasKey("Name");
 
                     b.ToTable("Dogs");
+
+                    b.HasData(
+                        new
+                        {
+                            Name = "Luntik",
+                            Color = "Red",
+                            TailLength = 10,
+                            Weight = 80
+                        },
+                        new
+                        {
+                            Name = "Doggy",
+                            Color = "Purple",
+                            TailLength = 15,
+                            Weight = 33
+                        },
+                        new
+                        {
+                            Name = "Kesha",
+                            Color = "Black",
+                            TailLength = 20,
+                            Weight = 5
+                        },
+                        new
+                        {
+                            Name = "Vupsen",
+                            Color = "Green",
+                            TailLength = 50,
+                            Weight = 50
+                        });
                 });
 #pragma warning restore 612, 618
         }

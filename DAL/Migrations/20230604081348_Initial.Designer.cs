@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(DbContextBase))]
-    [Migration("20230603130005_Initial")]
+    [Migration("20230604081348_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -42,6 +42,36 @@ namespace DAL.Migrations
                     b.HasKey("Name");
 
                     b.ToTable("Dogs");
+
+                    b.HasData(
+                        new
+                        {
+                            Name = "Luntik",
+                            Color = "Red",
+                            TailLength = 10,
+                            Weight = 80
+                        },
+                        new
+                        {
+                            Name = "Doggy",
+                            Color = "Purple",
+                            TailLength = 15,
+                            Weight = 33
+                        },
+                        new
+                        {
+                            Name = "Kesha",
+                            Color = "Black",
+                            TailLength = 20,
+                            Weight = 5
+                        },
+                        new
+                        {
+                            Name = "Vupsen",
+                            Color = "Green",
+                            TailLength = 50,
+                            Weight = 50
+                        });
                 });
 #pragma warning restore 612, 618
         }
